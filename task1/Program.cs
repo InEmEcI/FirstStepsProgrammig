@@ -1,7 +1,7 @@
 ﻿
 string? inputLineOne = Console.ReadLine();
 string? inputLineTwo = Console.ReadLine();
-
+/*
 if (inputLineOne != null && inputLineTwo != null){
     int inputNumberOne = int.Parse(inputLineOne);
     int inputNumberTwo = int.Parse(inputLineTwo);
@@ -9,6 +9,17 @@ if (inputLineOne != null && inputLineTwo != null){
     if (inputNumberOne == inputNumberTwo * inputNumberTwo){
         Console.WriteLine("Да");
     } else {
-        Console.WriteLine("Нет");
+        Console.Write("Нет");
+    };
+}
+*/
+if (inputLineOne != null && inputLineTwo != null){
+    int inputNumberOne = int.Parse(inputLineOne);
+    int inputNumberTwo = int.Parse(inputLineTwo);
+
+    if (inputNumberTwo == Math.Sqrt(inputNumberOne)){
+        Console.WriteLine("Да");
+    } else {
+        Console.Write("Нет");
     };
 }
