@@ -28,3 +28,18 @@
 /home/nemec/WEB/Обучение/!!! GB !!!/CS/FirstStepProgrammig/task0/bin/Debug/net6.0/tast0.pdb
 /home/nemec/WEB/Обучение/!!! GB !!!/CS/FirstStepProgrammig/task0/obj/Debug/net6.0/tast0.genruntimeconfig.cache
 /home/nemec/WEB/Обучение/!!! GB !!!/CS/FirstStepProgrammig/task0/obj/Debug/net6.0/ref/tast0.dll
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\bin\Debug\net6.0\tast0.exe
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\bin\Debug\net6.0\tast0.deps.json
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\bin\Debug\net6.0\tast0.runtimeconfig.json
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\bin\Debug\net6.0\tast0.dll
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\bin\Debug\net6.0\tast0.pdb
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.csproj.AssemblyReference.cache
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.GeneratedMSBuildEditorConfig.editorconfig
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.AssemblyInfoInputs.cache
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.AssemblyInfo.cs
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.csproj.CoreCompileInputs.cache
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.dll
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\refint\tast0.dll
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.pdb
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\tast0.genruntimeconfig.cache
+E:\WEB\! МОЁ !\! Обучение !\!!! GB !!!\!!!!!!!!!!!\CS\FirstStepsProgrammig\task0\obj\Debug\net6.0\ref\tast0.dll

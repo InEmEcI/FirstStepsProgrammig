@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/nemec/.nuget/packages/": {}
+    "C:\\Users\\Ilia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/nemec/WEB/Обучение/!!! GB !!!/CS/FirstStepProgrammig/task0/tast0.csproj",
+      "projectUniqueName": "E:\\WEB\\! МОЁ !\\! Обучение !\\!!! GB !!!\\!!!!!!!!!!!\\CS\\FirstStepsProgrammig\\task0\\tast0.csproj",
       "projectName": "tast0",
-      "projectPath": "/home/nemec/WEB/Обучение/!!! GB !!!/CS/FirstStepProgrammig/task0/tast0.csproj",
-      "packagesPath": "/home/nemec/.nuget/packages/",
-      "outputPath": "/home/nemec/WEB/Обучение/!!! GB !!!/CS/FirstStepProgrammig/task0/obj/",
+      "projectPath": "E:\\WEB\\! МОЁ !\\! Обучение !\\!!! GB !!!\\!!!!!!!!!!!\\CS\\FirstStepsProgrammig\\task0\\tast0.csproj",
+      "packagesPath": "C:\\Users\\Ilia\\.nuget\\packages\\",
+      "outputPath": "E:\\WEB\\! МОЁ !\\! Обучение !\\!!! GB !!!\\!!!!!!!!!!!\\CS\\FirstStepsProgrammig\\task0\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/nemec/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ilia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
