@@ -1,7 +1,7 @@
 ﻿
 
 Console.Clear();
-Console.Write("Введите день недели: ");
+Console.Write("Введите номер дня недели: ");
 
 string? inputLine = Console.ReadLine();
 
