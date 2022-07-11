@@ -9,8 +9,10 @@ if (inputLine != null)
 {
     int inputNumber = int.Parse(inputLine);
 
+    //string? OutDayOfWeek = System.Globalization.CultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValue(inputNumber));
+
     switch(inputNumber)
-    {
+        {
         case 1:
         Console.Write("Это Понедельник");
         break;
@@ -52,5 +54,6 @@ if (inputLine != null)
 
     Console.Write("Это "); 
     Console.Write(dayOfWeek[inputNumber - 1]);
-    */
+*/
+    //Console.Write("Это "); Console.Write(OutDayOfWeek);
 }
