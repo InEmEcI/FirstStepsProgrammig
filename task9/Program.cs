@@ -38,8 +38,11 @@ Console.WriteLine("-----------------------------");
 Console.WriteLine("Вариант 3");
 char[] digits = numberSintezator.Next(10,100).ToString().ToCharArray();
 
-Console.WriteLine("firstNumber is: "); firstNumber = ((int)digits[0]-48);
-Console.WriteLine("secondNumber is: "); secondNumber = ((int)digits[1]-48); 
+Console.Write("Рандомное число: "); Console.WriteLine(digits); 
+
+firstNumber = ((int)digits[0]-48);
+secondNumber = ((int)digits[1]-48); 
 
 int resultNumber = firstNumber>secondNumber?resultNumber=firstNumber:resultNumber=secondNumber;
-Console.Write("Result is: "); Console.Write(resultNumber);
+Console.Write("бОльшее из его цифр: "); Console.WriteLine(resultNumber);
+Console.WriteLine("-----------------------------");
