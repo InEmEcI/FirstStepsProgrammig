@@ -1,11 +1,13 @@
 ﻿// Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, 
 // что третьей цифры нет.
 
+// В 13 задачи оперировать с числом, а не строкой.
+
 Console.Clear();
 Console.Write("Введите число: ");
 string? inputLine = Console.ReadLine();
 
-void thirdDigit()
+void thirdDigitVariant1()
 {
 if (inputLine != null) 
 {
@@ -22,4 +24,5 @@ if (inputLine != null)
         }
 }
 }
-thirdDigit();
+
+thirdDigitVariant1();
