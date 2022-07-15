@@ -2,16 +2,19 @@
 // и проверяет, является ли этот день выходным.
 
 
-// В 15 задаче использовать конструкции List<> и Dictionary<> 2 варианта решения соответственно.
+
+// В 15 задаче использовать конструкции: 
+// * List<>  -
+// * Dictionary<>  + 
+// 2 варианта решения соответственно.
 
 Console.Clear();
 Console.Write("Введите номер дня недели: ");
 string? inputLine = Console.ReadLine();
 
-/*
-
 // Вариант 1
-//void numberOfWeek_1()
+/*
+void numberOfWeek_1()
 {
 if (inputLine != null) 
 {
@@ -29,8 +32,8 @@ if (inputLine != null)
 */
 
 // Вариант 2
-// void numberOfWeek_Dictionary()
-// {
+/*void numberOfWeek_Dictionary()
+{
 if (inputLine != null) 
 {       
     int inputNumber = int.Parse(inputLine);
@@ -45,8 +48,31 @@ if (inputLine != null)
         [7] = "Воскресенье.Выходной день!"
         };
 Console.Write(week.GetValueOrDefault(inputNumber));
-};       
+};
+}       
+*/
+
+// Вариант 3
+
+if (inputLine != null) 
+{
+    int inputNumber = int.Parse(inputLine);
+    
+    var week = new Dictionary<int, string>() 
+{
+        [1] = "Понедельник. Рабочий день.",
+        [2] = "Вторник. Рабочий день.",
+        [3] = "Среда. Рабочий день.",
+        [4] = "Четверг. Рабочий день.",
+        [5] = "Пятница. Рабочий день.",    
+        [6] = "Суббота. Выходной день!",
+        [7] = "Воскресенье.Выходной день!"
+};
+    Console.WriteLine($"Это: {week[inputNumber]}");    
+}
+
+
 
 //numberOfWeek_1();
 //numberOfWeek_Dictionary();
-//numberOfWeek_3();
+//numberOfWeek_List();
