@@ -8,9 +8,10 @@ Console.Clear();
 Console.Write("Введите номер дня недели: ");
 string? inputLine = Console.ReadLine();
 
-// Вариант 1
 /*
-void numberOfWeek_1()
+
+// Вариант 1
+//void numberOfWeek_1()
 {
 if (inputLine != null) 
 {
@@ -28,26 +29,24 @@ if (inputLine != null)
 */
 
 // Вариант 2
-void numberOfWeek_2()
-{
-    if (inputLine != null) 
-{
+// void numberOfWeek_Dictionary()
+// {
+if (inputLine != null) 
+{       
     int inputNumber = int.Parse(inputLine);
-
-    Dictionary<int, string> week = new Dictionary<int, string>()
-    {
-        {1, "рабочий" },
-        {2, "рабочий" },
-        {3, "рабочий" },
-        {4, "рабочий" },
-        {5, "рабочий" },
-        {6, "Выходной" },
-        {7, "Выходной" },        
-    };
-}
-    Console.WriteLine({week.FirstOrDefault(x => x.Key == inputNumber).Value});
-};
+    Dictionary<int, string> week = new Dictionary<int, string>()    
+        {
+        [1] = "Понедельник. Рабочий день.",
+        [2] = "Вторник. Рабочий день.",
+        [3] = "Среда. Рабочий день.",
+        [4] = "Четверг. Рабочий день.",
+        [5] = "Пятница. Рабочий день.",    
+        [6] = "Суббота. Выходной день!",
+        [7] = "Воскресенье.Выходной день!"
+        };
+Console.Write(week.GetValueOrDefault(inputNumber));
+};       
 
 //numberOfWeek_1();
-
-numberOfWeek_2();
+//numberOfWeek_Dictionary();
+//numberOfWeek_3();
