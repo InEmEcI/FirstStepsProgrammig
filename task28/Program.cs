@@ -6,7 +6,6 @@
 // 4 -> 24
 // 5 -> 120
 // 
-// С * - решить эту задачу с помощью Рекурсии !
 
 
 Console.Clear();
@@ -16,6 +15,7 @@ string? inpitLine = Console.ReadLine();
 int inputNum = int.Parse(inpitLine?? "");
 
 Console.WriteLine(sumNums(inputNum));
+Console.WriteLine(mulRec(inputNum));
 
 int sumNums(int num)
 {
@@ -27,6 +27,15 @@ int sumNums(int num)
         // sum = sum * i;
     }
     return sum;
+}
+
+// Рекурсия
+int mulRec(int num)
+{
+   if (num == 1)
+   {
+    return 1; 
+   } else return num * mulRec(num - 1);  
 }
 
 
