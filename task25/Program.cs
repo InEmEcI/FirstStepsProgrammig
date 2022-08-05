@@ -1,5 +1,4 @@
-﻿
-// №25 Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в
+﻿// №25 Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в
 // натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
@@ -7,37 +6,58 @@
 
 Console.Clear();
 
-long a;
-long b;
+double a;
+double b;
+string operation = string.Empty;
 
-void Read()
+
+Console.Write("Первое число: ");
+string? inputA = Console.ReadLine();
+a = double.Parse(inputA ?? "");
+
+// арифметическое действие
+Console.Write("Операция: ");
+operation = Console.ReadLine() ?? "";
+
+Console.Write("Второе число: ");
+string? inputB = Console.ReadLine();
+b = double.Parse(inputB ?? "");
+
+void calculation()
 {
-    Console.Write("Введите число: ");
-    string? inputA = Console.ReadLine();
-    a = long.Parse(inputA??"");
-
-    Console.Write("В какую степень его возвести: ");
-    string? inputB = Console.ReadLine();
-    b = long.Parse(inputB??"");
-}
-
-long calculation(long a, long b)
-{
-    long i = 0;
-    long result = 1;
-    while (i < b)
+    if (operation == "+")
     {
-        result *= b;
-        i++;
+        Console.Write(a + " " + operation + " " + b + " = " + (a + b));
     }
-    return result;
+    else
+
+    if (operation == "-")
+    {
+        Console.Write(a + " " + operation + " " + b + " = " + (a - b));
+    }
+    else
+
+    if (operation == "*")
+    {
+        Console.Write(a + " " + operation + " " + b + " = " + (a * b));
+    }
+    else
+
+    if (operation == "/")
+    {
+        Console.Write(a + " " + operation + " " + b + " = " + (a / b));
+    }
+    else
+
+    if (operation == "^")
+    {
+        Console.Write(a + " " + operation + " " + b + " = " + (Math.Pow(a, b)));
+    }
+    else
+    {
+        Console.Write("Ошибка ввода! Операциями может быть только  +  -  *  /  или ^ ");
+    }
+
 }
 
-void Print()
-{
-    Console.WriteLine(a + " в степени " + b + " = " + calculation(a, b));    
-}
-
-Read();
-
-Print();
+calculation();
