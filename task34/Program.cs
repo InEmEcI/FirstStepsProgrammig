@@ -91,5 +91,7 @@ int Calculations(int[] mas)
 
 Console.WriteLine();
 Console.WriteLine("Количество чётных чисел: " + Calculations(array));
+Console.WriteLine();
+Console.WriteLine();
 
 
