@@ -1,28 +1,146 @@
 ﻿
 
-// №36 Задайте одномерный массив, заполненный случайными числами. Найдите сумму
-// элементов, стоящих на нечётных позициях.
-// [3, 7, 23, 12] -> 19
-// [3, 7, -2, 1] -> 8
-// [-4, -6, 89, 6] -> 0
-// * Найдите все пары в массиве и выведите пользователю
+// Задача №38 
+
+// 1) Задайте массив вещественных чисел 
+// 2) Найдите разницу между максимальным и минимальным элементов массива.
+
+// [3 7 22 2 78] -> 76
+// [2 0,4 9 7,2 78] -> 77,6
+
+// 3) * Отсортируйте массив методом вставки и методом подсчета, а затем найдите
+// разницу между первым и последним элементом. Для задачи со звездочкой
+// использовать заполнение массива целыми числами.
 
 Console.Clear();
 
-int[] array = FillingArray(-100, 100, 4);
+int[] array = FillingArray(-100, 100);
 
-PrintIntArray(array);
+PrintArray(array);
+Console.WriteLine("------------------------------------------------");
+MaxMinDifference(array);
 
-Console.Write("Сумма элементов, стоящих на нечётных позициях: ");
-Console.Write(ElementsSum(array));
+Console.WriteLine("------------------------------------------------");
+Console.WriteLine("Массив, отсортированный методом Вставки: ");
+DateTime timePoint = DateTime.Now;
+PrintArray(InsertsMetod(array));
+Console.WriteLine("Время cортировки: " + (DateTime.Now - timePoint));
+Console.WriteLine("------------------------------------------------");
 
-//Метод возвращает одномерный массив, заполненный случайными числами от A до B. C - размер массива. 
-int[] FillingArray(int a, int b, int c)
+//Метод печатает массив
+void PrintArray(int[] arr)
 {
-    int[] outArray = new int[c];
+    //Буфферная переменная
+    int i = 0;
+    //Пробегаем все элементы массива
+    Console.Write("[ ");
+    while (i < arr.Length - 1)
+    {
+        //Выводим элемент массива
+        Console.Write(arr[i] + "  ");
+        //Увеличиваем инкремент
+        i++;
+    }
+    Console.WriteLine(arr[i] + " ]");
+}
+
+// метод определяет минимальный и максимальный элемент массива и разницу между ними
+void MaxMinDifference(int[] arr)
+{
+    Console.WriteLine("минимальное число: " + arr.Min());
+    Console.WriteLine("максимальное число: " + arr.Max());
+    Console.Write("Разница между ними: ");
+    Console.WriteLine(arr.Max() - arr.Min());
+}
+
+// выдаёт массив, отсортированный методом Вставки
+int[] InsertsMetod(int[] arr)
+{
+    for (int i = 1; i < arr.Length; i++)
+    {
+        int cur = arr[i];
+        int j = i;
+        while (j > 0 && cur < arr[j - 1])
+        {
+            arr[j] = arr[j - 1];
+            j--;
+        }
+        arr[j] = cur;
+    }
+
+
+    // for (int i = 0; index < arr.Length; index++)
+    // {
+    //     index = i;
+    //     currentNumber = arr[i];
+    //     while (index > 0 && currentNumber < arr[index - 1])
+    //     {
+    //         index--;
+    //     }
+    //     arr[index] = currentNumber;
+    // }
+    return arr;
+}
+
+
+// сортироква массива методом Подсчета
+
+DateTime timePoint1 = DateTime.Now;
+int[] sortedArray = CountingSort(array);
+Console.WriteLine("Массив, отсортированный методом Подсчёта: ");
+Console.Write("[ ");
+for (int i = 0; i < sortedArray.Length; i++)
+    Console.Write(sortedArray[i] + "  ");
+Console.WriteLine("]");
+Console.WriteLine("Время cортировки: " + (DateTime.Now - timePoint1));
+Console.WriteLine("------------------------------------------------"); 
+
+int[] CountingSort(int[] array)
+{
+    int[] sortedArray = new int[array.Length];
+ 
+    // find smallest and largest value
+    int minVal = array[0];
+    int maxVal = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] < minVal) minVal = array[i];
+        else if (array[i] > maxVal) maxVal = array[i];
+    }
+ 
+    // init array of frequencies
+    int[] counts = new int[maxVal - minVal + 1];
+ 
+    // init the frequencies
+    for (int i = 0; i < array.Length; i++)
+    {
+        counts[array[i] - minVal]++;
+    }
+ 
+    // recalculate
+    counts[0]--;
+    for (int i = 1; i < counts.Length; i++)
+    {
+        counts[i] = counts[i] + counts[i - 1];
+    }
+ 
+    // Sort the array
+    for (int i = array.Length - 1; i >= 0; i--)
+    {
+        sortedArray[counts[array[i] - minVal]--] = array[i];
+    }
+ 
+    return sortedArray;
+}
+
+
+//Метод возвращает одномерный массив, заполненный случайными ЦЕЛЫМИ числами от A до B
+int[] FillingArray(int a, int b)
+{
+    int[] outArray = new int[10];
     int i = 0;
     System.Random numberSintezator = new System.Random();
-    while (i < c)
+    while (i < 10) // длинна массива
     {
         outArray[i] = numberSintezator.Next(a, b);
         i++;
@@ -30,33 +148,19 @@ int[] FillingArray(int a, int b, int c)
     return outArray;
 }
 
-//Метод печатает массив
-void PrintIntArray(int[] inputArray)
+/*
+//Метод возвращает одномерный массив, заполненный случайными ВЕЩЕСТВЕННЫМИ числами от A до B
+double[] FillingArray(int a, int b)
 {
-    //Буфферная переменная
+    double[] outArray = new double[10];
     int i = 0;
-    //Пробегаем все элементы массива
-    Console.Write("[ ");
-    while (i < inputArray.Length - 1)
+    System.Random numberSintezator = new System.Random();
+    while (i < 10) // длинна массива
     {
-        //Выводим элемент массива
-        Console.Write(inputArray[i] + "  ");
-        //Увеличиваем инкремент
+        outArray[i] = numberSintezator.NextDouble() * 100;
+        // * (b - a) + a;
         i++;
     }
-    Console.WriteLine(inputArray[i] + " ]");    
+    return outArray;
 }
-
-// Метод выводит сумму элементов, стоящих на нечётных позициях
-int ElementsSum(int [] arr)
-{
-    int i = 1;
-    int sum = 0;
-    while (i < arr.Length)
-    {
-        sum = sum + arr[i];       
-        i = i + 2;
-    }
-    return sum;
-}
-
+*/
