@@ -2,6 +2,7 @@
 
 Console.Clear();
 
+/*
 Console.Write("Введите четырёхзначное число: ");
 string? inputLine = Console.ReadLine();
 char[] arr = inputLine.ToString().ToCharArray(); // - если в ручную ввёл
@@ -22,6 +23,8 @@ else if (inputLine != null)
     }
 
 }
+*/
+
 
 
 // если последняя = первой и предпоследняя = второй, то палиндром и в словарь его!
@@ -188,3 +191,24 @@ while (arr[0] > 0 && arr[3] > 0)
 
 }
 */
+
+
+//Метод добавляет 4-чзначные полиндромы в переданный словарь
+void poliDictGen(Dictionary<int, string> poliDict) 
+
+{
+int key;
+
+//Генерируем полиндромы с цикле - каждому двухзначному дописываем в конце его же зеркальное
+for (int i = 10; i < 100; i++) {
+key = i * 100 + (i % 10) * 10 + i / 10;
+poliDict.Add(key, key.ToString());
+
+}
+};
+
+// Dictionary<int, string>.ValueCollection values = poliDict.Values;
+// foreach (string value in values)
+// {
+    Console.WriteLine(poliDict{1});
+// }

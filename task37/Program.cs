@@ -9,12 +9,12 @@
 //Метод возвращает массив заполненый случайными числами 
 int[] FillingArray()
 {
-    int[] outArray = new int[123];
+    int[] outArray = new int[10];
     int i = 0;
     System.Random numberSintezator = new System.Random();
-    while (i < 123)
+    while (i < 10)
     {
-        outArray[i] = numberSintezator.Next(-1000,1000);
+        outArray[i] = numberSintezator.Next(-10,10);
         i++;
     }
     return outArray;
