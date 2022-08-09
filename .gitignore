@@ -383,6 +383,9 @@ FodyWeavers.xsd
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+.vscode/
+/FirstStepsProgrammig.csproj
+/Program.cs
 
 # Local History for Visual Studio Code
 .history/
@@ -396,3 +399,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# My catalogs
+task017/
+test/
