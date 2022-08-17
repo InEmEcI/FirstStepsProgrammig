@@ -12,24 +12,30 @@
 
 Console.Clear();
 
-Console.Write("Введите строку: ");
-int column = int.Parse(Console.ReadLine());
-Console.Write("Введите столбец: ");
-int row = int.Parse(Console.ReadLine());
+// Это вариант решения ЭТОЙ задачи
+// Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и
+// возвращает значение этого элемента или же указание, что такого элемента нет
+// Console.Write("Введите строку: ");
+// int column = int.Parse(Console.ReadLine());
+// Console.Write("Введите столбец: ");
+// int row = int.Parse(Console.ReadLine());
+// if (column > 4 || row > 3)
+// {
+//     Console.WriteLine("Такого числа в массиве нет  ");
+// }
+// else
+// {
+//     Console.WriteLine("Это цифра: " + array[column-1, row-1]);
+// }
 
 int[,] array = FillTwoDimArray(4, 3); // размер массива
 
-Console.WriteLine("Массив: ");
-PrintTwoDimArray(array);
+Console.Write("Введите число: ");
+int number = int.Parse(Console.ReadLine());
 
-if (column > 4 || row > 3)
-{
-    Console.WriteLine("Такого числа в массиве нет  ");
-}
-else
-{
-    Console.WriteLine("Это цифра: " + array[column-1, row-1]);
-}
+PrintTwoDimArray(array);
+Console.WriteLine();
+Result(Search(array, number));
 
 // метод для заполнения двумерного массива
 int[,] FillTwoDimArray(int countRow, int countColumn)
@@ -62,10 +68,43 @@ void PrintTwoDimArray(int[,] inputArray)
         {
             Console.Write(inputArray[i, j] + " ");
             j++;
-        }
-        //Console.Write("\n");
+        }        
         Console.WriteLine();
         i++;
     }
 }
 
+// метод поиска введённого числа
+bool Search(int[,] arr, int e)
+{
+    int i = 0; int j = 0; bool res = false;
+
+    while (i < arr.GetLength(0))
+    {
+        j = 0;
+        while (j < arr.GetLength(1))
+        {
+            if (arr[i, j] == e)
+            {
+                res = true;
+            }
+            j++;
+        }
+        Console.WriteLine();
+        i++;
+    }
+    return res;
+}
+
+// метод вывода на экран результата
+void Result(bool res)
+{
+    if (res == true)
+    {
+        Console.Write("Элемент найден!");
+    }
+    else
+    {
+        Console.Write("Элемент отсутствует!");
+    }
+}
